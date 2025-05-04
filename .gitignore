@@ -1,4 +1,4 @@
-test/CMakeFiles/
-test/Makefile
-test/cmake_install.cmake
-test/CMakeCache.txt
+test/cmake/CMakeFiles/
+test/cmake/Makefile
+test/cmake/cmake_install.cmake
+test/cmake/CMakeCache.txt
