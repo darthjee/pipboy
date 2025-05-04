@@ -2,6 +2,7 @@ services:
   pipboy-test:
     image: pipboy-test
     container_name: pipboy_test
+    user: app
     build:
       context: .
       dockerfile: Dockerfile
