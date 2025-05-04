@@ -1,10 +1,15 @@
 cmake_minimum_required(VERSION 3.10)
 project(PipBoy tests)
 
-# Ativa C++17 (ou versão que você usa)
-set(CMAKE_CXX_STANDARD 17)
+# Activate C++15
+set(CMAKE_CXX_STANDARD 15)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-# Adiciona subdiretórios
+# Add subdirectory
 add_subdirectory(lib)
+add_subdirectory(test)
+
+# Add executable
 add_executable(tests test.cpp)
+
+gtest_discover_tests(tests)
