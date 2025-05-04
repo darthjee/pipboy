@@ -7,3 +7,4 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 # Adiciona subdiretórios
 add_subdirectory(lib)
+add_executable(tests test.cpp)
