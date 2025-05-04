@@ -1,0 +1,10 @@
+version: '3'
+services:
+  pipboy-test:
+    image: pipboy-test
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./source/lib:/home/app/app/lib
+      - ./test:/home/app/app/test
