@@ -5,6 +5,6 @@ RUN useradd -u 1000 app; \
     chown app.app -R /home/app
 
 RUN apt-get update; \
-    apt-get install -y libgtest-dev cmake
+    apt-get install -y libgtest-dev cmake build-essential googletest
 
 WORKDIR /home/app/app
