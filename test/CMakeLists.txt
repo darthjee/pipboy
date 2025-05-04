@@ -6,4 +6,4 @@ set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 # Add executable
-add_executable(tests tests/test.cpp)
+add_executable(PipBoyTest tests/test.cpp)
