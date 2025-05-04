@@ -3,7 +3,7 @@
 IMAGE=pipboy-test
 
 build-dev:
-	docker build . -f Dockerfile.dev -t $(IMAGE)
+	docker build . -f Dockerfile -t $(IMAGE)
 
 ensure-image:
 	if ! (docker images |  grep $(IMAGE)); then \
