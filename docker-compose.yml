@@ -7,5 +7,5 @@ services:
       context: .
       dockerfile: Dockerfile
     volumes:
+      - ./test:/home/app/app/
       - ./source/lib:/home/app/app/lib
-      - ./test:/home/app/app/test
