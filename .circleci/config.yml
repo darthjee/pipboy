@@ -15,5 +15,5 @@ jobs:
       - image: gcc
     steps:
       - echo:
-        name: Echo
-        command: echo ok
+          name: Echo
+          command: echo ok
