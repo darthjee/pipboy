@@ -1,14 +1,16 @@
 BINARY_FILE?=cmake/PipBoyTest
 MAKE_FILE?=cmake/Makefile
+REQUIRED_FILES=lib/* tests/* cmake/CMakeLists.txt
 
 all:
 	make $(BINARY_FILE)
 
-$(MAKE_FILE): lib/* tests/* cmake/CMakeLists.txt
+$(MAKE_FILE): $(REQUIRED_FILES)
+
 	cd cmake; \
 	cmake .
 
-$(BINARY_FILE): $(MAKE_FILE) lib/* cmake/CMakeLists.txt tests/*
+$(BINARY_FILE): $(MAKE_FILE) $(REQUIRED_FILES)
 	cd cmake; \
 	make
 
