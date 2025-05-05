@@ -1,0 +1,34 @@
+version: 2
+
+workflows:
+  version: 2
+  test:
+    jobs:
+      - build:
+          filters:
+            tags:
+              only: /.*/
+
+jobs:
+  build:
+    docker:
+      - image: gcc
+    working_directory: /home/app/app/test
+    steps:
+      - checkout:
+          path: /home/app/app
+      - run:
+          name: Update dependencies
+          command: apt-get update
+      - run:
+          name: Update dependencies
+          command: apt-get install -y libgtest-dev cmake build-essential googletest
+      - run:
+          name: Copy files
+          command: cp ../source/lib ./lib -R
+      - run:
+          name: Generate binary
+          command: make
+      - run:
+          name: Run tests
+          command: make run
