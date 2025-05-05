@@ -21,6 +21,9 @@ jobs:
       - run:
           name: Update dependencies
           command: apt-get install -y libgtest-dev cmake build-essential googletest
+      - run:
+          name: Debug
+          command: pwd; ls
       - checkout:
           path: /home/app/app
       - run:
