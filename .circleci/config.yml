@@ -15,17 +15,14 @@ jobs:
       - image: gcc
     working_directory: /home/app/app/test
     steps:
+      - checkout:
+          path: /home/app/app
       - run:
           name: Update dependencies
           command: apt-get update
       - run:
           name: Update dependencies
           command: apt-get install -y libgtest-dev cmake build-essential googletest
-      - run:
-          name: Debug
-          command: pwd; ls
-      - checkout:
-          path: /home/app/app
       - run:
           name: Copy files
           command: cp ../source/lib ./lib -R
