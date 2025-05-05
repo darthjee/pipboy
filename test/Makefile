@@ -2,13 +2,13 @@ BINARY_FILE?=tests/cmake/PipBoyTest
 MAKE_FILE?=tests/Makefile
 
 all:
-	make $BINARY_FILE
+	make $(BINARY_FILE)
 
-$MAKE_FILE:
+$(MAKE_FILE): lib/* tests/* cmake/CMakeLists.txt
 	cd cmake; \
 	cmake .
 
-$BINARY_FILE: $MAKE_FILE
+$(BINARY_FILE): $(MAKE_FILE) lib/* cmake/CMakeLists.txt tests/*
 	cd cmake; \
 	make
 
