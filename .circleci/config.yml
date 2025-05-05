@@ -16,5 +16,8 @@ jobs:
     steps:
       - checkout
       - run:
+          name: Set working directory
+          command: cd test
+      - run:
           name: LS
           command: ls
