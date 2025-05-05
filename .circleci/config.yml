@@ -13,9 +13,9 @@ jobs:
   build:
     docker:
       - image: gcc
-        working_directory: test/
     steps:
-      - checkout
+      - checkout:
+        path: test
       - run:
           name: DEBUG
           command: pwd
