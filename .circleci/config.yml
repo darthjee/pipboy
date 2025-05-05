@@ -15,7 +15,7 @@ jobs:
       - image: gcc
     steps:
       - checkout:
-        path: test
+          path: test
       - run:
           name: DEBUG
           command: pwd
