@@ -1,3 +1,5 @@
+.PHONY: run
+
 BINARY_FILE?=cmake/PipBoyTest
 MAKE_FILE?=cmake/Makefile
 REQUIRED_FILES=lib/* tests/* cmake/CMakeLists.txt
@@ -13,6 +15,9 @@ $(MAKE_FILE): $(REQUIRED_FILES)
 $(BINARY_FILE): $(MAKE_FILE) $(REQUIRED_FILES)
 	cd cmake; \
 	make
+
+run: $(BINARY_FILE)
+	$(BINARY_FILE)
 
 clean:
 	rm -rf \
