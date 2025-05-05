@@ -18,6 +18,9 @@ jobs:
       - checkout:
           path: /root/project
       - run:
+          name: Copy files
+          command: cp ../source/lib ./lib -R
+      - run:
           name: Generate binary
           command: make
       - run:
