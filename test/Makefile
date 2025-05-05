@@ -1,5 +1,5 @@
-BINARY_FILE?=tests/cmake/PipBoyTest
-MAKE_FILE?=tests/Makefile
+BINARY_FILE?=cmake/PipBoyTest
+MAKE_FILE?=cmake/Makefile
 
 all:
 	make $(BINARY_FILE)
@@ -14,8 +14,8 @@ $(BINARY_FILE): $(MAKE_FILE) lib/* cmake/CMakeLists.txt tests/*
 
 clean:
 	rm -rf \
-	test/cmake/CMakeFiles/ \
-	test/cmake/Makefile \
-	test/cmake/cmake_install.cmake \
-	test/cmake/CMakeCache.txt \
-	test/cmake/PipBoyTest
+	cmake/CMakeFiles/ \
+	cmake/Makefile \
+	cmake/cmake_install.cmake \
+	cmake/CMakeCache.txt \
+	cmake/PipBoyTest
