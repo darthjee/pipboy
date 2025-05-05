@@ -12,9 +12,15 @@ workflows:
 jobs:
   build:
     docker:
-      - image: gcc
+      - image: cimg/gcc
     working_directory: /root/project/test
     steps:
+      - run:
+          name: Update dependencies
+          command: apt-get update
+      - run:
+          name: Update dependencies
+          command: apt-get install -y libgtest-dev cmake build-essential googletest
       - checkout:
           path: /root/project
       - run:
