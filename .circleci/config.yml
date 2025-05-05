@@ -13,7 +13,7 @@ jobs:
   build:
     docker:
       - image: gcc
-    working_directory: /root/project/test
+    working_directory: /home/app/test
     steps:
       - run:
           name: Update dependencies
@@ -22,7 +22,7 @@ jobs:
           name: Update dependencies
           command: apt-get install -y libgtest-dev cmake build-essential googletest
       - checkout:
-          path: /root/project
+          path: /home/app
       - run:
           name: Copy files
           command: cp ../source/lib ./lib -R
