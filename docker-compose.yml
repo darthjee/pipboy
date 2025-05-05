@@ -1,0 +1,11 @@
+services:
+  pipboy-test:
+    image: pipboy-test
+    container_name: pipboy_test
+    user: app
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./test:/home/app/app/
+      - ./source/lib:/home/app/app/lib
