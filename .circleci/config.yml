@@ -18,8 +18,5 @@ jobs:
       - checkout:
           path: /root/project
       - run:
-          name: DEBUG
-          command: pwd
-      - run:
-          name: LS
-          command: ls
+          name: Generate binary
+          command: make
