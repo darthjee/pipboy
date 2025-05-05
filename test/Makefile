@@ -1,11 +1,14 @@
-all:
-	make tests/Makefile
+BINARY_FILE?=tests/cmake/PipBoyTest
+MAKE_FILE?=tests/Makefile
 
-tests/Makefile:
+all:
+	make $BINARY_FILE
+
+$MAKE_FILE:
 	cd cmake; \
 	cmake .
 
-tests/cmake/PipBoyTest: tests/Makefile
+$BINARY_FILE: $MAKE_FILE
 	cd cmake; \
 	make
 
