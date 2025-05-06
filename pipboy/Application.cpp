@@ -1,7 +1,23 @@
 #include "Application.h"
 
 void Application::setStatus(Application::Status newStatus) {
+    StatusLed::Status newLedStatus;
     currentStatus = newStatus;
+
+    switch (currentStatus) {
+        case OFF:
+            newLedStatus = StatusLed::Status::OFF;
+            break;
+        case IDLE:
+            newLedStatus = StatusLed::Status::IDLE;
+            break;
+        case PROCESSING:
+            newLedStatus = StatusLed::Status::PROCESSING;
+            break;
+        case ERROR:
+            newLedStatus = StatusLed::Status::ERROR;
+            break;
+    }
 }
 
 void Application::process() {
