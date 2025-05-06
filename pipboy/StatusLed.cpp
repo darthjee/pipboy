@@ -1,5 +1,4 @@
 #include "StatusLed.h"
-#include <Arduino.h>
 
 void StatusLed::changeStatus(StatusLed::Status newStatus) {
     currentStatus = newStatus;
