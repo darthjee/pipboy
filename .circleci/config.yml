@@ -25,7 +25,7 @@ jobs:
           command: apt-get install -y libgtest-dev cmake build-essential googletest
       - run:
           name: Copy files
-          command: cp ../source/lib ./lib -R
+          command: cp ../pipboy/lib ./lib -R
       - run:
           name: Generate binary
           command: make
