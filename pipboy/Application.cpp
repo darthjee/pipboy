@@ -21,6 +21,7 @@ void Application::setStatus(Application::Status newStatus) {
 }
 
 void Application::process() {
+    /*
     switch (currentStatus) {
         case OFF:
             setStatus(Application::Status::IDLE);
@@ -35,9 +36,10 @@ void Application::process() {
             setStatus(Application::Status::OFF);
             break;
     }
+    */
     updateComponents();
 
-    delay(1000);
+    delay(300);
 }
 
 void Application::updateComponents() {

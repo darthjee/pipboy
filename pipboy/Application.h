@@ -21,8 +21,7 @@ public:
     void updateComponents();
 
 private:
-    // Atributo para armazenar o status atual
-    Application::Status currentStatus;
+    Application::Status currentStatus = ERROR;
 };
 
 #endif // APPLICATION_H
