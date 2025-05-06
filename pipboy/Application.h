@@ -15,14 +15,14 @@ public:
     };
 
     // Método para definir o status da aplicação
-    void setStatus(Status newStatus);
+    void setStatus(Application::Status newStatus);
 
     void process();
     void updateComponents();
 
 private:
     // Atributo para armazenar o status atual
-    Status currentStatus;
+    Application::Status currentStatus;
 };
 
 #endif // APPLICATION_H

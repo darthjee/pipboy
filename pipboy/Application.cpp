@@ -1,6 +1,6 @@
 #include "Application.h"
 
-void Application::setStatus(Status newStatus) {
+void Application::setStatus(Application::Status newStatus) {
     currentStatus = newStatus;
 }
 
