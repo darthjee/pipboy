@@ -1,6 +1,10 @@
-#define LED_PIN_R 16
-#define LED_PIN_G 255
-#define LED_PIN_B 2
+#include <lib/Application.h>
+#include <Arduino.h>
+#include <Wire.h>
+
+
+Application app;
+
 
 void setup() {
   
