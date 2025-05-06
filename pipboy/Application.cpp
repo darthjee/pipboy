@@ -5,6 +5,11 @@ void Application::setStatus(Status newStatus) {
 }
 
 void Application::process() {
-    led.update();
+    updateComponents();
+
     delay(1000);
+}
+
+void Application::updateComponents() {
+    led.update();
 }

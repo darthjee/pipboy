@@ -18,6 +18,7 @@ public:
     void setStatus(Status newStatus);
 
     void process();
+    void updateComponents();
 
 private:
     // Atributo para armazenar o status atual
