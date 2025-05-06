@@ -3,9 +3,9 @@
 
 #include "LedInterface.h" 
 
-class Led {
+class StatusLed {
 public:
-    Led() {}
+   StatusLed() {}
 
     LedInterface interface;
 };

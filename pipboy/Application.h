@@ -1,11 +1,11 @@
 #ifndef APPLICATION_H
 #define APPLICATION_H
 
-#include "Led.h"
+#include "StatusLed.h"
 
 class Application {
 public:
-    Led led;
+    StatusLed led;
     // Enum para representar os possíveis estados da aplicação
     enum Status {
         IDLE,
