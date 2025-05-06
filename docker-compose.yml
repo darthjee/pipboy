@@ -8,4 +8,4 @@ services:
       dockerfile: Dockerfile
     volumes:
       - ./test:/home/app/app/
-      - ./pipboy/lib:/home/app/app/lib
+      - ./pipboy:/home/app/app/lib
