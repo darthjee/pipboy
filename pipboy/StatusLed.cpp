@@ -8,15 +8,16 @@ void StatusLed::changeStatus(StatusLed::Status newStatus) {
 void StatusLed::update() {
     switch (currentStatus) {
         case OFF:
+            interface.setColors(0, 0, 0);
             break;
         case IDLE:
-            // Ligar o LED verde
+            interface.setColors(0, 255, 0);
             break;
         case PROCESSING:
-            // Ligar o LED azul
+            interface.setColors(0, 0, 255);
             break;
         case ERROR:
-            // Ligar o LED vermelho
+            interface.setColors(255, 0, 0);
             break;
     }
 }
