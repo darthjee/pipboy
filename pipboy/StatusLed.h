@@ -8,9 +8,24 @@
 
 class StatusLed {
 public:
+    // Enum para os possíveis status do LED
+    enum Status {
+        OFF,
+        IDLE,
+        PROCESSING,
+        ERROR
+    };
+
+    // Construtor que inicializa o LedInterface com os pinos definidos
     StatusLed() : interface(LED_PIN_R, LED_PIN_G, LED_PIN_B) {}
 
+    // Método para mudar o status do LED
+    void changeStatus(Status newStatus);
+
     LedInterface interface;
+
+private:
+    Status currentStatus; // Atributo para armazenar o status atual
 };
 
 #endif // LED_H
