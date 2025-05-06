@@ -28,7 +28,6 @@ void Application::setLedStatus() {
 }
 
 void Application::process() {
-    /*
     switch (currentStatus) {
         case OFF:
             setStatus(Application::Status::IDLE);
@@ -43,8 +42,7 @@ void Application::process() {
             setStatus(Application::Status::OFF);
             break;
     }
-    */
-    setLedStatus();
+    
     updateComponents();
 
     delay(300);
