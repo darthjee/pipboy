@@ -9,7 +9,7 @@ public:
     // Enum para representar os possíveis estados da aplicação
     enum Status {
         IDLE,
-        RUNNING,
+        PROCESSING,
         ERROR,
         OFF
     };

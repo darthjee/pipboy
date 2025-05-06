@@ -5,6 +5,20 @@ void Application::setStatus(Application::Status newStatus) {
 }
 
 void Application::process() {
+    switch (currentStatus) {
+        case OFF:
+            setStatus(Application::Status::IDLE);
+            break;
+        case IDLE:
+            setStatus(Application::Status::PROCESSING);
+            break;
+        case PROCESSING:
+            setStatus(Application::Status::ERROR);
+            break;
+        case ERROR:
+            setStatus(Application::Status::OFF);
+            break;
+    }
     updateComponents();
 
     delay(1000);
