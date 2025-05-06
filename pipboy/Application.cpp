@@ -1,23 +1,30 @@
 #include "Application.h"
 
 void Application::setStatus(Application::Status newStatus) {
-    StatusLed::Status newLedStatus;
     currentStatus = newStatus;
+    setLedStatus();
+}
+
+
+void Application::setLedStatus() {
+    StatusLed::Status newStatus;
 
     switch (currentStatus) {
         case OFF:
-            newLedStatus = StatusLed::Status::OFF;
+            newStatus = StatusLed::Status::OFF;
             break;
         case IDLE:
-            newLedStatus = StatusLed::Status::IDLE;
+            newStatus = StatusLed::Status::IDLE;
             break;
         case PROCESSING:
-            newLedStatus = StatusLed::Status::PROCESSING;
+            newStatus = StatusLed::Status::PROCESSING;
             break;
         case ERROR:
-            newLedStatus = StatusLed::Status::ERROR;
+            newStatus = StatusLed::Status::ERROR;
             break;
     }
+
+    led.changeStatus(newStatus);
 }
 
 void Application::process() {
@@ -37,6 +44,7 @@ void Application::process() {
             break;
     }
     */
+    setLedStatus();
     updateComponents();
 
     delay(300);

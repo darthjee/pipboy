@@ -14,14 +14,14 @@ public:
         OFF
     };
 
-    // Método para definir o status da aplicação
     void setStatus(Application::Status newStatus);
 
     void process();
+    void setLedStatus();
     void updateComponents();
 
 private:
-    Application::Status currentStatus = ERROR;
+    Application::Status currentStatus = OFF;
 };
 
 #endif // APPLICATION_H
