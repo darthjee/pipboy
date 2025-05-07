@@ -1,7 +1,7 @@
 #ifndef LED_INTERFACE_H
 #define LED_INTERFACE_H
 
-#include <Arduino.h> // Required for uint8_t type
+#include <Arduino.h>
 
 class RGBLedInterface {
 public:
