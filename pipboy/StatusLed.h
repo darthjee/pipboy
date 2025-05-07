@@ -7,11 +7,8 @@
 #if defined(LED_NEOPIXEL)
 
 #include "LedStripeInterface.h"
-#define LED_NUM 10
-#define LED_NEOPIXEL_PIN 10
-#define NEO_RGB 10
-#define NEO_KHZ800 10
-
+#define LED_NUM 1
+#define LED_NEOPIXEL_PIN 15
 
 #elif defined(LED_DIGITAL)
 
