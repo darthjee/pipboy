@@ -3,7 +3,7 @@
 
 #include <Arduino.h>
 //#include <Adafruit_NeoPixel.h> // Required for NeoPixel functionality
-#include "external/Adafruit_NeoPixel-1.7.0/Adafruit_NeoPixel.h"
+#include "src/Adafruit_NeoPixel-1.7.0/Adafruit_NeoPixel.h"
 
 class LedStripeInterface {
 public:
