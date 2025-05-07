@@ -3,10 +3,10 @@
 
 #include <Arduino.h> // Required for uint8_t type
 
-class LedInterface {
+class RGBLedInterface {
 public:
     // Constructor that receives the RGB pins
-    LedInterface(uint8_t pin_r, uint8_t pin_g, uint8_t pin_b)
+    RGBLedInterface(uint8_t pin_r, uint8_t pin_g, uint8_t pin_b)
         : pin_r(pin_r), pin_g(pin_g), pin_b(pin_b) {
         // Set pins as output
         pinMode(pin_r, OUTPUT);

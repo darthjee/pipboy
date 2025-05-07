@@ -1,7 +1,7 @@
 #ifndef LED_H
 #define LED_H
 
-#include "LedInterface.h"
+#include "RGBLedInterface.h"
 #include "Component.h"
 #define LED_PIN_R 16
 #define LED_PIN_G 255
@@ -21,7 +21,7 @@ public:
     void changeStatus(Status newStatus);
     void update() override;
 
-    LedInterface interface;
+    RGBLedInterface interface;
 
 private:
     Status currentStatus;
