@@ -10,8 +10,8 @@ public:
         : pin_r(pin_r), pin_g(pin_g), pin_b(pin_b) {
         // Set pins as output
         pinMode(pin_r, OUTPUT);
-        //pinMode(pin_g, OUTPUT);
-        //pinMode(pin_b, OUTPUT);
+        pinMode(pin_g, OUTPUT);
+        pinMode(pin_b, OUTPUT);
     }
 
     // Method to set the colors of the LED
